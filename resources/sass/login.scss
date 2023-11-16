@@ -1,0 +1,11 @@
+.login {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .container {
+    width: clamp(300px, 50%, 450px);
+    .form {
+    }
+  }
+}

@@ -1,0 +1,600 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+@import 'media';
+@import 'login';
+
+@import 'leftMenu.scss';
+@import 'formAdmin';
+@import 'formUser';
+
+body {
+  background-color: ($body-bg);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+}
+
+a {
+  color: $clr-dank;
+}
+
+.btn {
+  &Primary {
+    color: $light;
+    background-color: $primary-color;
+
+    &:hover {
+      color: $light !important;
+      opacity: 0.8;
+    }
+
+    &:disabled {
+      color: $light !important;
+      border-color: $text-color !important;
+      background-color: $text-color !important;
+      box-shadow: 0 2px 0 $text-color !important;
+
+      opacity: 0.8;
+    }
+  }
+
+  &Secondary {
+    color: $light;
+    background-color: $secondary-color;
+    box-shadow: 0 2px 0 $secondary-color !important;
+    border-color: $secondary-color !important;
+
+    &:hover {
+      color: $light !important;
+      border-color: $secondary-color !important;
+      background-color: $secondary-color !important;
+      opacity: 0.8;
+    }
+
+    &:disabled {
+      color: $light !important;
+      border-color: $text-color !important;
+      background-color: $text-color !important;
+      box-shadow: 0 2px 0 $text-color !important;
+
+      opacity: 0.8;
+    }
+  }
+}
+
+// Modal
+.ant-modal-content {
+  .ant-btn-primary {
+    background-color: $primary-color !important;
+  }
+
+  .ant-btn-default:not(:disabled):hover {
+    color: $primary-color;
+    border-color: $primary-color;
+  }
+}
+
+#root {
+  // Button
+
+  .ant-btn.ant-btn-lg {
+    font-size: 20px;
+    height: 100%;
+
+    &.btnLarge {
+      min-width: 120px;
+    }
+  }
+
+  .ant-btn-default.ant-btn-background-ghost {
+    color: $primary-color;
+    border-color: $primary-color;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .ant-input-group {
+    position: relative;
+    height: max-content;
+  }
+
+  @include tablet() {
+    // Button
+    .ant-btn.ant-btn-lg {
+      font-size: 16px;
+
+      &.btnLarge {
+        min-width: 120px;
+      }
+    }
+  }
+
+  @include mobileLarge() {
+    .ant-btn.ant-btn-lg {
+      font-size: 14px;
+
+      &.btnLarge {
+        min-width: 95px;
+      }
+    }
+  }
+
+  @include mobile() {
+    // Button
+    .ant-btn.ant-btn-lg {
+      font-size: 12px;
+
+      &.btnLarge {
+        min-width: 95px;
+      }
+    }
+  }
+}
+
+.ant-space-item {
+  // width: 100% !important;
+}
+
+.backgroundLight {
+  background-color: $light;
+}
+
+// Pagination
+.ant-pagination {
+  .ant-pagination-item {
+    height: 100% !important;
+  }
+
+  .btnPage.ant-btn-default {
+    height: 100% !important;
+  }
+}
+
+// Pagination
+.btnPagination {
+  height: 50px;
+  width: 60px;
+  padding: 10px 0px;
+  text-align: center;
+  user-select: none;
+
+  &.btnPaginationAction {
+    border-color: $primary-color !important;
+
+    &.ant-radio-button-wrapper-checked {
+      // border-color: $light !important;
+      color: $light !important;
+      background-color: $primary-color !important;
+    }
+
+    &.ant-radio-button-wrapper-disabled {
+      // color: rgba(0, 0, 0, 0.25) !important;
+      // background-color: rgba(0, 0, 0, 0.15) !important;
+      // border-color: #d9d9d9 !important;
+      box-shadow: none !important;
+      border-color: #d9d9d9 !important;
+      color: rgba(0, 0, 0, 0.25) !important;
+      background-color: rgba(0, 0, 0, 0.04) !important;
+    }
+  }
+
+  &.btnPagePagination {
+    &.ant-radio-button-wrapper-checked {
+      color: $light !important;
+      border-color: $secondary-color !important;
+      background-color: $secondary-color !important;
+
+      &:not(:where(.css-dev-only-do-not-override-js1xk9).ant-radio-button-wrapper-disabled)::before {
+        background-color: $secondary-color !important;
+      }
+    }
+  }
+
+  @include mobileLarge() {
+    height: 38px;
+    width: 60px;
+    padding: 3px 0px;
+
+    &.ant-radio-button-wrapper {
+      display: table-cell !important;
+    }
+  }
+
+  @include mobile() {
+    height: 38px;
+    width: 60px;
+    padding: 3px 0px;
+
+    &.ant-radio-button-wrapper {
+      display: table-cell !important;
+    }
+  }
+}
+
+// Table
+.ant-table-wrapper {
+  // height: 62vh;
+  // overflow-y: scroll;
+
+  .ant-table-thead > tr > th span {
+    cursor: pointer;
+  }
+
+  .ant-table-selection-column.ant-table-cell {
+    padding-inline: 4px;
+  }
+
+  // hide scroll bar
+  &:-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+
+  @include mobileLarge() {
+    height: auto;
+  }
+
+  @include mobile() {
+    height: auto;
+  }
+}
+
+table {
+  margin: 20px 0px;
+
+  @include mobileLarge() {
+    width: min-content !important;
+
+    .ant-table-thead > tr > th,
+    .ant-table-tbody > tr > td,
+    tfoot > tr > th,
+    tfoot > tr > td {
+      padding: 10px 7px !important;
+    }
+  }
+
+  @include mobile() {
+    width: min-content !important;
+
+    .ant-table-thead > tr > th,
+    .ant-table-tbody > tr > td,
+    tfoot > tr > th,
+    tfoot > tr > td {
+      padding: 2px 7px !important;
+    }
+  }
+}
+
+form {
+  &.hiddenLabel {
+    color: $body-bg;
+
+    .ant-col.ant-col-0 {
+      width: 0px !important;
+      display: none;
+    }
+  }
+}
+
+// Input
+.ant-form-item {
+  .textCenter {
+    input {
+      text-align: center;
+    }
+  }
+
+  .ant-form-item-label > label.ant-form-item-required::before {
+    margin-top: 5px;
+  }
+
+  .ant-form-item-label > label {
+    align-items: unset;
+    margin-top: 10px;
+  }
+}
+
+// Toast
+.css-jfeqr5 {
+  z-index: 1001 !important;
+}
+
+.css-1ad3zal {
+  overflow-wrap: anywhere;
+}
+
+// Loading Modal
+.ant-modal-root {
+  .ant-modal-wrap {
+    &:has(.loadingModal) {
+      z-index: 1002;
+    }
+  }
+}
+
+.ant-modal-root .ant-modal-mask {
+  &:has(+ .ant-modal-wrap .loadingModal) {
+    z-index: 1001;
+  }
+}
+
+.service-table-course {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d9d9d9;
+  border-radius: 9px;
+
+  table {
+    margin: 0px 0px;
+  }
+
+  .ant-table-wrapper .ant-table-thead > tr > th {
+    background: #ffffff;
+  }
+
+  .ant-table-wrapper .ant-table-thead > tr > th::before {
+    content: none !important;
+  }
+}
+
+.btn-detail-redirect {
+  border-color: #f2efef !important;
+  color: #000000 !important;
+  :hover {
+    opacity: 0.8;
+  }
+}
+
+.btn-detail-redirect-company {
+  background: #cfe3a7 !important;
+  color: #000000 !important;
+  border-color: #cfe3a7 !important;
+  :hover {
+    opacity: 0.8;
+  }
+}
+
+.label-checkbox-admin .ant-form-item-label > label {
+  align-items: unset;
+  margin-top: 3px;
+}
+
+.label-is-site-access {
+  label {
+    width: 150px;
+    white-space: break-spaces;
+    margin-top: 0px !important;
+  }
+}
+
+.label-classification {
+  label {
+    margin-top: 0 !important;
+  }
+}
+
+.editor-flow {
+  .ql-editor {
+    min-height: 150px;
+  }
+}
+
+.setting-service {
+  label {
+    &::after {
+      content: unset !important;
+    }
+  }
+}
+
+.quill .ql-container.ql-snow {
+  border: none;
+}
+
+#collap-qa {
+  .ant-list-item-meta-title {
+    padding: 10px;
+    background: #faad146e;
+    font-weight: unset;
+  }
+
+  .ql-container.ql-snow {
+    border: none;
+  }
+  #collap-head {
+    display: flex;
+    align-items: center;
+    &::before {
+      content: '•';
+      font-size: 25px;
+      color: #f9d990;
+    }
+
+    span {
+      cursor: pointer;
+      &:hover {
+        color: #e27a34;
+      }
+    }
+  }
+  .ant-collapse-header {
+    margin-right: 20px;
+  }
+  .ant-collapse-header .ant-collapse-header-text {
+    text-decoration: underline !important;
+    overflow-wrap: break-word;
+    width: 100%;
+  }
+  .ant-collapse-item-active .ant-collapse-header-text {
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #faad146e;
+    text-decoration: none !important;
+  }
+  .ant-collapse-content-box {
+    padding: 0 15px 0 15px !important;
+  }
+  .ql-editor {
+    padding-left: 0 !important;
+    padding-top: 5px !important;
+    padding-bottom: 0 !important;
+  }
+
+  .ql-editor {
+    p {
+      color: black !important;
+    }
+  }
+  .ant-collapse-expand-icon {
+    margin-right: -12px;
+  }
+
+  .ant-list-item {
+    border-block-end: none !important;
+  }
+
+  #question {
+    .ant-list-item {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+}
+
+a {
+  color: $clr-dank;
+}
+
+.fullWidth {
+  width: 100% !important;
+}
+
+.widthAuto {
+  width: auto !important;
+}
+
+.fullHeight {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1024px;
+}
+
+.alignSelf {
+  &Center {
+    align-self: center;
+  }
+}
+
+.flex {
+  display: flex;
+
+  &Wrap {
+    flex-wrap: wrap;
+  }
+
+  &.column {
+    flex-direction: column;
+  }
+
+  &.row {
+    flex-direction: row;
+  }
+
+  &.center {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.justifyContentStart {
+    justify-content: flex-start;
+  }
+
+  &.justifyContentEnd {
+    justify-content: flex-end;
+  }
+
+  &.justifyContentBaseline {
+    justify-content: baseline;
+  }
+
+  &.justifyContentCenter {
+    justify-content: center;
+  }
+
+  &.spaceBetween {
+    justify-content: space-between;
+  }
+
+  &.spaceAround {
+    justify-content: space-around;
+  }
+
+  &.alignItemsCenter {
+    align-items: center;
+  }
+
+  &.alignItemsStart {
+    align-items: flex-start;
+  }
+
+  &.alignItemsEnd {
+    align-items: flex-end;
+  }
+
+  &.alignItemsBaseline {
+    align-items: baseline;
+  }
+}
+
+.text {
+  &.textH1 {
+    font-size: var($text-h1);
+  }
+
+  &.textBody {
+    font-size: var($text-body);
+  }
+
+  &.textMedium {
+    font-size: var($text-medium);
+  }
+
+  &.textPlace {
+    font-size: var($text-place);
+  }
+}
+
+.grid {
+  display: grid;
+}
+
+// Upload
+.ant-upload-list-item.ant-upload-list-item-done {
+  min-height: 102px;
+  max-height: 102px;
+}
+.ant-upload-list-item.ant-upload-list-item-done a.ant-upload-list-item-thumbnail {
+  // min-height: 102px;
+  max-height: 85px;
+}

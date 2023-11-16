@@ -1,0 +1,307 @@
+$border-radius-user: 2px;
+
+.formAntFE {
+  width: 100%;
+  background-color: $light;
+  padding: 10px;
+  border-radius: 2px;
+
+  padding: 10px 25px;
+
+  // Check box
+
+  .checkBox{
+
+    .ant-space-item {
+      display: flex;
+   
+      .ant-checkbox-inner {
+        width: 25px;
+        height: 25px;
+  
+        &::after {
+          width: 5.714286px;
+          height: 15.142857px;
+        }
+
+      }
+      span{
+        font-size: 12px;
+      }
+    }
+  }
+
+  // Radio
+  .ant-radio-wrapper {
+    font-size: 16px;
+
+    .ant-radio-inner {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  // Label
+
+  .labelNoStyle {
+    &.ant-form-item .ant-form-item-label {
+      & > label {
+        height: auto;
+      }
+    }
+  }
+
+  .ant-form-item .ant-form-item-label {
+    text-align: left;
+
+    & > label {
+      height: 100%;
+      font-size: 16px;
+    }
+  }
+
+  .groupInput {
+    .ant-form-item .ant-form-item-label {
+      & > label {
+        height: fit-content;
+        height: -webkit-fill-available;
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  .ant-picker {
+    width: min(250px, 100%);
+  }
+
+  // Input
+  .ant-input-number-affix-wrapper,
+  .ant-input-number {
+    width: 100%;
+    border-radius: $border-radius-user;
+
+    .ant-input-number-handler-wrap {
+      border-start-end-radius: $border-radius-user;
+      border-end-end-radius: $border-radius-user;
+    }
+  }
+
+  .ant-input,
+  .ant-input-number-input,
+  .ant-picker-range,
+  .ant-select-single,
+  .ant-picker {
+    height: 32px;
+    border-radius: $border-radius-user;
+  }
+
+  .ant-form-item-control-input-content {
+    .ant-input-textarea {
+      .ant-input-affix-wrapper {
+        height: auto;
+      }
+    }
+
+    .ant-input-affix-wrapper {
+      height: 32px;
+
+      // Input
+      .ant-input,
+      .ant-input-number-input {
+        height: auto;
+        // border-radius: $border-radius-user;
+      }
+    }
+  }
+
+  // Select
+  .ant-select-selector {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    border-radius: $border-radius-user;
+  }
+
+  button {
+    &.bolder {
+      span {
+        font-weight: bold;
+      }
+    }
+
+    &.btnAction {
+      min-width: 150px;
+    }
+  }
+
+  // Typography
+  h5,
+  h4 {
+    &.ant-typography {
+      color: $text-color;
+      font-weight: 300;
+    }
+  }
+  h5 {
+    &.ant-typography {
+      font-size: 14px;
+    }
+  }
+
+  // Tabs
+  .fullTabs {
+    .ant-tabs-nav-list {
+      width: 100%;
+      display: flex;
+
+      .ant-tabs-tab {
+        flex: 1;
+        border: none;
+        border-radius: 0px;
+      }
+    }
+  }
+
+  @include tablet() {
+    // Radio
+    .ant-radio-wrapper {
+      font-size: 14px;
+
+      .ant-radio-inner {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    // Tab
+    .ant-tabs .ant-tabs-tab {
+      font-size: 14px;
+    }
+
+    // Label
+    .ant-form-item .ant-form-item-label {
+      & > label {
+        font-size: 15px;
+      }
+    }
+
+    button {
+      &.btnAction {
+        min-width: 120px;
+      }
+    }
+  }
+
+  @include mobileLarge() {
+    padding: 10px 3px;
+
+    .ant-radio-wrapper {
+      font-size: 13px;
+
+      .ant-radio-inner {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    // Tab
+    .ant-tabs .ant-tabs-tab {
+      font-size: 13px;
+    }
+
+    // Label
+    .ant-form-item .ant-form-item-label {
+      & > label {
+        font-size: 14px;
+      }
+    }
+
+    // Input
+    .ant-input,
+    .ant-input-number-input,
+    .ant-picker-range,
+    .ant-select-single,
+    .ant-input-affix-wrapper,
+    .ant-select-selector,
+    .ant-picker {
+      height: 28px;
+    }
+
+    .groupInput {
+      &.ant-form-item .ant-form-item-label {
+        & > label {
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    button {
+      &.btnAction {
+        min-width: 100px;
+      }
+    }
+  }
+
+  @include mobile() {
+    padding: 10px 3px;
+
+    // Radio
+    .ant-radio-wrapper {
+      font-size: 13px;
+
+      .ant-radio-inner {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    // Tab
+    .ant-tabs .ant-tabs-tab {
+      font-size: 12px;
+    }
+
+    // Label
+    .ant-form-item .ant-form-item-label {
+      & > label {
+        font-size: 14px;
+      }
+    }
+
+    // Input
+    .ant-input,
+    .ant-input-number-input,
+    .ant-picker-range,
+    .ant-select-single,
+    .ant-input-affix-wrapper,
+    .ant-select-selector,
+    .ant-picker {
+      height: 26px;
+    }
+
+    .groupInput {
+      &.ant-form-item .ant-form-item-label {
+        & > label {
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    // Button
+    button {
+      &.btnAction {
+        min-width: 100px;
+      }
+    }
+
+    // Check box
+    .ant-checkbox-inner {
+      width: 23px;
+      height: 23px;
+
+      &::after {
+        width: 4.714286px;
+        height: 14.142857px;
+      }
+    }
+  }
+}

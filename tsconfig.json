@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@components/*": ["./resources/js/src/components/*"],
+
+      "@constants": ["./resources/js/src/constants/index"],
+      "@constants/*": ["./resources/js/src/constants/*"],
+
+      "@hooks": ["./resources/js/src/hooks/index"],
+      "@hooks/*": ["./resources/js/src/hooks/*"],
+
+      "@navigation/*": ["./resources/js/src/navigation/*"],
+      "@networking/*": ["./resources/js/src/networking/*"],
+      "@pages/*": ["./resources/js/src/pages/*"],
+      "@reducer/*": ["./resources/js/src/redux/*"],
+      "@util": ["./resources/js/src/util/index"],
+      "@/*": ["./resources/js/src/*"],
+      
+      "@local/*": ["./*"]
+    },
+    "jsx": "react-jsx",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
+  },
+  "include": ["resources/js/**/*"]
+}

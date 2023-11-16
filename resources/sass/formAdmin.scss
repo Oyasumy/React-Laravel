@@ -1,0 +1,298 @@
+.formAnt {
+  width: 100%;
+
+  background-color: $light;
+  padding: 10px;
+  border-radius: 6px;
+
+  padding: 10px 25px;
+
+  form {
+    height: 100%;
+  }
+
+  .usersTable {
+    flex: 1;
+    .ant-table-wrapper {
+      flex: 1;
+    }
+  }
+  // Check box
+  .ant-checkbox-inner {
+    width: 25px;
+    height: 25px;
+
+    &::after {
+      width: 5.714286px;
+      height: 15.142857px;
+    }
+  }
+
+  // Radio
+  .ant-radio-wrapper {
+    font-size: 16px;
+
+    .ant-radio-inner {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  // Label
+
+  .labelNoStyle {
+    &.ant-form-item .ant-form-item-label {
+      & > label {
+        height: auto;
+      }
+    }
+  }
+
+  .ant-form-item .ant-form-item-label {
+    text-align: left;
+
+    & > label {
+      height: 100%;
+      font-size: 16px;
+    }
+  }
+
+  .groupInput {
+    .ant-form-item .ant-form-item-label {
+      & > label {
+        height: fit-content;
+        height: -webkit-fill-available;
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  .ant-picker {
+    width: min(250px, 100%);
+  }
+
+  // Input
+  .ant-input-number-affix-wrapper,
+  .ant-input-number {
+    width: 100%;
+    border-radius: 10px;
+
+    .ant-input-number-handler-wrap {
+      border-start-end-radius: 10px;
+      border-end-end-radius: 10px;
+    }
+  }
+
+  .ant-input,
+  .ant-input-number-input,
+  .ant-picker-range,
+  .ant-select.ant-select-in-form-item.ant-select-single,
+  .ant-picker {
+    height: 50px;
+    border-radius: 10px;
+  }
+
+  .ant-form-item-control-input-content {
+    .ant-input-textarea {
+      .ant-input-affix-wrapper {
+        height: auto;
+      }
+    }
+
+    .ant-input-affix-wrapper {
+      height: 50px;
+
+      // Input
+      .ant-input,
+      .ant-input-number-input {
+        height: auto;
+        // border-radius: 10px;
+      }
+    }
+  }
+
+  // Select
+  .ant-select-selector {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+  }
+
+  // Search
+  .ant-input-affix-wrapper {
+  }
+
+  button {
+    &.bolder {
+      span {
+        font-weight: bold;
+      }
+    }
+
+    &.btnAction {
+      min-width: 150px;
+    }
+  }
+
+  @include tablet() {
+    // Radio
+    .ant-radio-wrapper {
+      font-size: 14px;
+
+      .ant-radio-inner {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    // Tab
+    .ant-tabs .ant-tabs-tab {
+      font-size: 14px;
+    }
+
+    // Label
+    .ant-form-item {
+      margin-bottom: 10px;
+      &.ant-form-item-label {
+        & > label {
+          font-size: 15px;
+        }
+      }
+    }
+
+    button {
+      &.btnAction {
+        min-width: 120px;
+      }
+    }
+  }
+
+  @include mobileLarge() {
+    padding: 10px 3px;
+
+    .ant-radio-wrapper {
+      font-size: 13px;
+
+      .ant-radio-inner {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    // Tab
+    .ant-tabs .ant-tabs-tab {
+      font-size: 13px;
+    }
+
+    // Label
+    .ant-form-item {
+      margin-bottom: 10px;
+      .ant-form-item-label {
+        & > label {
+          font-size: 14px;
+        }
+      }
+    }
+
+    // Input
+    .ant-input,
+    .ant-input-number-input,
+    .ant-picker-range,
+    .ant-input-affix-wrapper,
+    .ant-select-in-form-item .ant-select-selector,
+    .ant-picker {
+      height: 45px;
+    }
+
+    .groupInput {
+      &.ant-form-item .ant-form-item-label {
+        & > label {
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    button {
+      &.btnAction {
+        min-width: 100px;
+      }
+    }
+  }
+
+  @include mobile() {
+    padding: 10px 3px;
+
+    // Radio
+    .ant-radio-wrapper {
+      font-size: 13px;
+
+      .ant-radio-inner {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    // Tab
+    .ant-tabs .ant-tabs-tab {
+      font-size: 12px;
+    }
+
+    // Label
+    .ant-form-item{
+      margin-bottom: 0px;
+      .ant-form-item-label {
+        & > label {
+          font-size: 14px;
+        }
+      }
+    }
+
+    // Input
+    .ant-input,
+    .ant-input-number-input,
+    .ant-picker-range,
+    .ant-input-affix-wrapper,
+    .ant-select-in-form-item .ant-select-selector,
+    .ant-picker {
+      height: 40px;
+    }
+
+    .groupInput {
+      &.ant-form-item .ant-form-item-label {
+        & > label {
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    // Button
+    button {
+      &.btnAction {
+        min-width: 100px;
+      }
+    }
+
+    // Check box
+    .ant-checkbox-inner {
+      width: 23px;
+      height: 23px;
+
+      &::after {
+        width: 4.714286px;
+        height: 14.142857px;
+      }
+    }
+
+    // Search
+    .ant-input-search {
+      .ant-input-affix-wrapper {
+        height: 32px;
+
+        input {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
